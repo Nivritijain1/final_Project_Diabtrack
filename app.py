@@ -6,7 +6,6 @@ import pickle
 import warnings
 warnings.filterwarnings('ignore')
 
-# Page config with dark theme
 st.set_page_config(
     page_title="🩺 Diabetes Risk Predictor",
     page_icon="🩺",
