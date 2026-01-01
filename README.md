@@ -1,7 +1,5 @@
 DiabTrack — Git-Driven Development Story
-
 A Practical Demonstration of Why Git Is Essential in Real ML Systems
-
 Project Context: Why Git Was Necessary from Day One
 
 DiabTrack is not a single-file script. It is a multi-domain system involving:
@@ -54,7 +52,6 @@ Logical separation of concerns
 Easier debugging and review
 
 <img width="776" height="499" alt="Screenshot (248)" src="https://github.com/user-attachments/assets/c2acc2db-8de4-4596-97a6-b1f01be1590d" />
-
 Step 3: Preprocessing Branch — Isolating a Critical ML Phase
 
 Preprocessing is one of the most sensitive phases in machine learning:
@@ -84,13 +81,13 @@ Once preprocessing was in place, a testing branch was created to evaluate model 
 git checkout -b test/evaluation-suite
 
 <img width="1158" height="550" alt="Screenshot (249)" src="https://github.com/user-attachments/assets/05bd661d-a215-4e1b-a0d1-a6060796e659" />
-
-BRANCHES : 
-master	                                Stable, production-ready code
-feature/preprocessing-pipeline	        Feature engineering & leakage fixes
-test/evaluation-suite	                  Model testing & metrics validation
-experiment/alt-ui	UI                    Frontend experimentation
-bugfix/documentation-cleanup	          README & documentation fixes
+Branches
+Branch Name	Purpose
+master	Stable, production-ready code
+feature/preprocessing-pipeline	Feature engineering & leakage fixes
+test/evaluation-suite	Model testing & metrics validation
+experiment/alt-ui	UI Frontend experimentation
+bugfix/documentation-cleanup	README & documentation fixes
 
 During testing, an important issue surfaced:
 
@@ -112,8 +109,7 @@ Instead of committing unstable code, Git stash was used:
 
 git stash push -m "Testing revealed label leakage via preprocessing feature"
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/00c3bbcf-9651-4e4e-80f0-1dee326472f6" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c8614eda-eae3-49be-90c4-a46709192229" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/00c3bbcf-9651-4e4e-80f0-1dee326472f6" /> <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c8614eda-eae3-49be-90c4-a46709192229" />
 
 This allowed:
 
@@ -125,7 +121,7 @@ Clean commit history without experimental noise
 
 Later, the work was safely restored using:
 
-step 6: Collaboration — Inviting a Tester as a Collaborator
+Step 6: Collaboration — Inviting a Tester as a Collaborator
 
 To simulate a real-world scenario, a collaborator was invited specifically for testing purposes.
 
@@ -136,6 +132,7 @@ Independent validation
 Fresh perspective on evaluation logic
 
 Real collaboration workflow
+
 <img width="1139" height="513" alt="Screenshot 2026-01-01 134003 (1)" src="https://github.com/user-attachments/assets/05ba00f3-61c0-4e11-9ee9-b7970bd1630b" />
 
 The collaborator worked on a separate branch, ensuring:
@@ -153,8 +150,6 @@ During integration, a merge conflict occurred because:
 Both contributors modified the same documentation lines
 
 Git could not infer semantic intent
-
-![WhatsApp Image 2026-01-01 at 1 33 25 PM](https://github.com/user-attachments/assets/cd9a0f2f-c68e-4895-949f-cb602da08bdb)
 
 Instead of aborting, the conflict was:
 
@@ -210,7 +205,7 @@ Collaboration was structured
 
 History remained clean and meaningful
 
-Git was not used because it was required,
+Git was not used because it was required.
 Git was used because the project demanded it.
 
 Challenges Faced & Lessons Learned
@@ -226,7 +221,7 @@ Discovered only due to isolated testing branch
 
 Highlighted need for evaluation separation
 
- Artifact Management
+Artifact Management
 
 .pkl files initially committed
 
