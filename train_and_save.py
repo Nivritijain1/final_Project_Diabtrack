@@ -271,3 +271,8 @@ print("\n🎉 Training pipeline completed successfully!")
 print(f"\n📁 Files created in: {os.getcwd()}")
 print("   - diabetes_scaler.pkl (Feature scaler)")
 print("   - model_info.json (Model metadata)")
+<<<<<<< HEAD
+=======
+print("Self-report correlation check:",
+      df[['Diabetes_SelfReport', 'Diabetes_Target_Unified']].corr().iloc[0,1])
+>>>>>>> test/evaluation-suite
