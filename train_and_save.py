@@ -272,3 +272,5 @@ print(f"\n📁 Files created in: {os.getcwd()}")
 print("   - diabetes_model.pkl (Trained ensemble model)")
 print("   - diabetes_scaler.pkl (Feature scaler)")
 print("   - model_info.json (Model metadata)")
+print("Self-report correlation check:",
+      df[['Diabetes_SelfReport', 'Diabetes_Target_Unified']].corr().iloc[0,1])
