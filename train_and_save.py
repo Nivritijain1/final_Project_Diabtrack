@@ -250,7 +250,6 @@ with open('diabetes_model.pkl', 'wb') as f:
 with open('diabetes_scaler.pkl', 'wb') as f:
     pickle.dump(scaler, f)
 
-print("✅ Model saved as 'diabetes_model.pkl'")
 print("✅ Scaler saved as 'diabetes_scaler.pkl'")
 print("✅ Feature order:", features)
 
@@ -270,6 +269,5 @@ with open('model_info.json', 'w') as f:
 
 print("\n🎉 Training pipeline completed successfully!")
 print(f"\n📁 Files created in: {os.getcwd()}")
-print("   - diabetes_model.pkl (Trained ensemble model)")
 print("   - diabetes_scaler.pkl (Feature scaler)")
 print("   - model_info.json (Model metadata)")
